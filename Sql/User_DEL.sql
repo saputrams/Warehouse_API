@@ -1,0 +1,1 @@
+﻿exec User_DEL @userId, @token, @userName

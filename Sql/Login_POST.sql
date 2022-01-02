@@ -1,1 +1,1 @@
-﻿exec Login_POST @UserName, @Password
+﻿exec Login_POST @userName, @password

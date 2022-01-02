@@ -5,9 +5,9 @@ using System.Web;
 
 namespace Warehouse_API.Models
 {
-    public class Role
+    public class ResponseData
     {
-        public string PK { get; set; }
-        public string Name { get; set; }
+        public string Message { get; set; }
+        public Object Data { get; set; }
     }
 }

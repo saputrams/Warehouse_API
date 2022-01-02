@@ -1,0 +1,1 @@
+﻿exec Category_GET @categoryId, @token, @userName

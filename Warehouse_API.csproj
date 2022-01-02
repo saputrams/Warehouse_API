@@ -161,6 +161,8 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Controllers\AuthController.cs" />
+    <Compile Include="Controllers\CategoryController.cs" />
+    <Compile Include="Controllers\ItemController.cs" />
     <Compile Include="Controllers\RoleController.cs" />
     <Compile Include="Controllers\UsersController.cs" />
     <Compile Include="Global.asax.cs">
@@ -169,8 +171,13 @@
     <Compile Include="Helper\Connection.cs" />
     <Compile Include="Models\Auth\Auth.cs" />
     <Compile Include="Models\Auth\AuthData.cs" />
-    <Compile Include="Models\Auth\AuthResponse.cs" />
-    <Compile Include="Models\Role.cs" />
+    <Compile Include="Models\Category\Category.cs" />
+    <Compile Include="Models\Item\Item.cs" />
+    <Compile Include="Models\Item\ItemData.cs" />
+    <Compile Include="Models\ResponseData.cs" />
+    <Compile Include="Models\Role\Role.cs" />
+    <Compile Include="Models\Users\Users.cs" />
+    <Compile Include="Models\Users\UsersData.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -209,8 +216,15 @@
     <Content Include="Scripts\jquery-3.4.1.slim.js" />
     <Content Include="Scripts\jquery-3.4.1.slim.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Sql\Category_GET.sql" />
+    <Content Include="Sql\Item_DEL.sql" />
+    <Content Include="Sql\Item_GET.sql" />
+    <Content Include="Sql\Item_POST.sql" />
     <Content Include="Sql\Login_POST.sql" />
     <Content Include="Sql\Role_GET.sql" />
+    <Content Include="Sql\User_DEL.sql" />
+    <Content Include="Sql\User_GET.sql" />
+    <Content Include="Sql\User_POST.sql" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

@@ -5,9 +5,9 @@ using System.Web;
 
 namespace Warehouse_API.Models
 {
-    public class AuthResponse
+    public class Role
     {
-        public string Message { get; set; }
-        public Auth Data { get; set; }
+        public string ID { get; set; }
+        public string Name { get; set; }
     }
 }

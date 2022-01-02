@@ -9,6 +9,7 @@ using Warehouse_API.Models;
 
 namespace Warehouse_API.Controllers
 {
+    [System.Web.Mvc.ValidateAntiForgeryToken]
     public class AuthController : ApiController
     {
 
@@ -18,17 +19,16 @@ namespace Warehouse_API.Controllers
         {
             connection = new Connection();
         }
-        // GET api/<controller>
 
         [HttpPost]
         public IHttpActionResult Post([FromBody] AuthData data)
         {
-            AuthResponse response = new AuthResponse();
+            ResponseData response = new ResponseData();
             try
             {
-                string UserName = data.UserName;
-                string Password = data.Password;
-                Auth authObj = connection.Get<Auth>("Login_POST", new { UserName, Password }).FirstOrDefault();
+                string userName = data.UserName;
+                string password = data.Password;
+                Auth authObj = connection.Get<Auth>("Login_POST", new { userName, password }).FirstOrDefault();
 
 
                 response.Message = "SUCCESS";

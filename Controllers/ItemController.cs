@@ -6,15 +6,15 @@ using System.Net.Http;
 using System.Web.Http;
 using Warehouse_API.Helper;
 using Warehouse_API.Models;
-using Warehouse_API.Models.Users;
+using Warehouse_API.Models.Item;
 
 namespace Warehouse_API.Controllers
 {
-    public class UsersController : ApiController
+    public class ItemController : ApiController
     {
         Connection connection;
 
-        UsersController()
+        ItemController()
         {
             connection = new Connection();
         }
@@ -25,14 +25,15 @@ namespace Warehouse_API.Controllers
             ResponseData response = new ResponseData();
             try
             {
-                string pk = "";
+                string itemId = "";
                 string filter = "";
                 string search = "";
-                IEnumerable<Users> user = connection.Get<Users>("User_GET", new { pk, filter, search,  token, userName }).ToList();
+                IEnumerable<Item> item = connection.Get<Item>("Item_GET",
+                    new { itemId, filter, search, token, userName }).ToList();
 
 
                 response.Message = "SUCCESS";
-                response.Data = user;
+                response.Data = item;
                 return this.Content(HttpStatusCode.OK, response);
             }
             catch (Exception error)
@@ -50,14 +51,14 @@ namespace Warehouse_API.Controllers
             ResponseData response = new ResponseData();
             try
             {
-                string pk = id;
+                string itemId = id;
                 string filter = "";
                 string search = "";
-                Users user = connection.Get<Users>("User_GET", new { pk, filter, search, token, userName }).FirstOrDefault();
+                Item item = connection.Get<Item>("Item_GET", new { itemId, filter, search, token, userName }).FirstOrDefault();
 
 
                 response.Message = "SUCCESS";
-                response.Data = user;
+                response.Data = item;
                 return this.Content(HttpStatusCode.OK, response);
             }
             catch (Exception error)
@@ -75,14 +76,14 @@ namespace Warehouse_API.Controllers
             ResponseData response = new ResponseData();
             try
             {
-                string pk = id;
+                string itemId = id;
                 string filter = userFilter;
                 string search = userSearch;
-                IEnumerable<Users> user = connection.Get<Users>("User_GET", new { pk, filter, search, token, userName }).ToList();
+                IEnumerable<Item> item = connection.Get<Item>("Item_GET", new { itemId, filter, search, token, userName }).ToList();
 
 
                 response.Message = "SUCCESS";
-                response.Data = user;
+                response.Data = item;
                 return this.Content(HttpStatusCode.OK, response);
             }
             catch (Exception error)
@@ -95,22 +96,25 @@ namespace Warehouse_API.Controllers
         }
 
         [HttpPost]
-        public IHttpActionResult Post([FromBody] UsersData data, string token, string userName)
+        public IHttpActionResult Post([FromBody]ItemData data, string token, string userName)
         {
             ResponseData response = new ResponseData();
             try
             {
-                string userId = data.UserId;
-                string userNameNew = data.UserName;
-                string userPassword = data.Password;
-                string roleId = data.RoleId;
-                int isActive = data.IsActive? 1 : 0;
-                Users user = connection.Get<Users>("User_POST",
-                    new { userId, userNameNew, userPassword, roleId, isActive, token, userName }).FirstOrDefault();
+                string itemId = data.ItemId;
+                string itemNo = data.ItemNo;
+                string style = data.Style;
+                string size = data.Size;
+                string desc = data.Desc;
+                double qty = data.Qty;
+                double price = data.Price;
+                string categoryId = data.CategoryId;
+                Item item = connection.Get<Item>("Item_POST",
+                    new { itemId, itemNo, style, size, desc, qty, price, categoryId, token, userName }).FirstOrDefault();
 
 
                 response.Message = "SUCCESS";
-                response.Data = user;
+                response.Data = item;
                 return this.Content(HttpStatusCode.OK, response);
             }
             catch (Exception error)
@@ -122,14 +126,13 @@ namespace Warehouse_API.Controllers
             }
         }
 
-
-        [HttpDelete]
-        public IHttpActionResult Delete(string userId, string token, string userName)
+        // DELETE: api/Item/5
+        public IHttpActionResult Delete(string itemId, string token, string userName)
         {
             ResponseData response = new ResponseData();
             try
             {
-                connection.Get<Users>("User_DEL", new { userId, token, userName });
+                connection.Get<Item>("Item_DEL", new { itemId, token, userName });
 
                 response.Message = "SUCCESS";
                 response.Data = null;
