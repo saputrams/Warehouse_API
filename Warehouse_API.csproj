@@ -163,6 +163,7 @@
     <Compile Include="Controllers\AuthController.cs" />
     <Compile Include="Controllers\CategoryController.cs" />
     <Compile Include="Controllers\ItemController.cs" />
+    <Compile Include="Controllers\LocationController.cs" />
     <Compile Include="Controllers\RoleController.cs" />
     <Compile Include="Controllers\UsersController.cs" />
     <Compile Include="Global.asax.cs">
@@ -174,6 +175,8 @@
     <Compile Include="Models\Category\Category.cs" />
     <Compile Include="Models\Item\Item.cs" />
     <Compile Include="Models\Item\ItemData.cs" />
+    <Compile Include="Models\Location\Location.cs" />
+    <Compile Include="Models\Location\LocationData.cs" />
     <Compile Include="Models\ResponseData.cs" />
     <Compile Include="Models\Role\Role.cs" />
     <Compile Include="Models\Users\Users.cs" />
@@ -220,6 +223,9 @@
     <Content Include="Sql\Item_DEL.sql" />
     <Content Include="Sql\Item_GET.sql" />
     <Content Include="Sql\Item_POST.sql" />
+    <Content Include="Sql\Location_DEL.sql" />
+    <Content Include="Sql\Location_GET.sql" />
+    <Content Include="Sql\Location_POST.sql" />
     <Content Include="Sql\Login_POST.sql" />
     <Content Include="Sql\Role_GET.sql" />
     <Content Include="Sql\User_DEL.sql" />

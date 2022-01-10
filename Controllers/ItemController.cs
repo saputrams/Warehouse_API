@@ -10,6 +10,7 @@ using Warehouse_API.Models.Item;
 
 namespace Warehouse_API.Controllers
 {
+    [System.Web.Mvc.ValidateAntiForgeryToken]
     public class ItemController : ApiController
     {
         Connection connection;
