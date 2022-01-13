@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace Warehouse_API.Models.Inbound
+namespace Warehouse_API.Models.Order
 {
-    public class InboundFetch
+    public class OrderFetch
     {
         public string OrderId { get; set; }
         public string OrderNo { get; set; }

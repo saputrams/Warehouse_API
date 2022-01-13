@@ -1,1 +1,0 @@
-﻿exec Inbound_GET @token, @userName

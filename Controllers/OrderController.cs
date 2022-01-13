@@ -6,16 +6,16 @@ using System.Net.Http;
 using System.Web.Http;
 using Warehouse_API.Helper;
 using Warehouse_API.Models;
-using Warehouse_API.Models.Inbound;
+using Warehouse_API.Models.Order;
 
 namespace Warehouse_API.Controllers
 {
-    [System.Web.Mvc.ValidateAntiForgeryToken]
-    public class InboundController : ApiController
+    public class OrderController : ApiController
     {
+
         Connection connection;
 
-        InboundController()
+        OrderController()
         {
             connection = new Connection();
         }
@@ -24,39 +24,38 @@ namespace Warehouse_API.Controllers
         public IHttpActionResult Get(string token, string userName)
         {
             ResponseData response = new ResponseData();
-            List<Inbound> inbound = new List<Inbound>() ;
-            IEnumerable<InboundDetail> inboundDetail = null;
-            Inbound inboundData;
+            List<Order> order = new List<Order>();
+            IEnumerable<OrderDetail> orderDetail = null;
+            Order orderData;
             try
             {
-                IEnumerable<InboundFetch> data = connection.Get<InboundFetch>("Inbound_GET", new { token, userName }).ToList();
+                IEnumerable<OrderFetch> data = connection.Get<OrderFetch>("Order_GET", new { token, userName }).ToList();
                 foreach (var s in data.Select(x => new { x.OrderId, x.OrderNo, x.OrderDate, x.Status, x.OrderType }).Distinct().ToList())
                 {
-                    inboundData = new Inbound();
-                    inboundDetail = data.Where(e => e.OrderId == s.OrderId).Select(y => new InboundDetail { OrderDetailId = y.OrderDetailId, ItemNo = y.ItemNo, Qty = y.Qty, QtyScanning = y.QtyScanning }).Distinct().ToList();
+                    orderData = new Order();
+                    orderDetail = data.Where(e => e.OrderId == s.OrderId).Select(y => new OrderDetail { OrderDetailId = y.OrderDetailId, ItemNo = y.ItemNo, Qty = y.Qty, QtyScanning = y.QtyScanning }).Distinct().ToList();
 
-                    inboundData.OrderId = s.OrderId;
-                    inboundData.OrderNo = s.OrderNo;
-                    inboundData.OrderDate = s.OrderDate;
-                    inboundData.OrderType = s.OrderType;
-                    inboundData.Status = s.Status;
-                    inboundData.OrderDetail = (List<InboundDetail>)inboundDetail;
+                    orderData.OrderId = s.OrderId;
+                    orderData.OrderNo = s.OrderNo;
+                    orderData.OrderDate = s.OrderDate;
+                    orderData.OrderType = s.OrderType;
+                    orderData.Status = s.Status;
+                    orderData.OrderDetail = (List<OrderDetail>)orderDetail;
 
-                    inbound.Add(inboundData);
+                    order.Add(orderData);
                 }
 
 
                 response.Message = "SUCCESS";
-                response.Data = inbound;
+                response.Data = order;
                 return this.Content(HttpStatusCode.OK, response);
             }
-            catch(Exception error)
+            catch (Exception error)
             {
                 response.Message = error.Message;
                 response.Data = null;
                 return this.Content(HttpStatusCode.BadRequest, response);
             }
-            
         }
 
         // GET api/<controller>/5
