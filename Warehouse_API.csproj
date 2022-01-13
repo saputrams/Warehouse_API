@@ -162,6 +162,7 @@
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Controllers\AuthController.cs" />
     <Compile Include="Controllers\CategoryController.cs" />
+    <Compile Include="Controllers\InboundController.cs" />
     <Compile Include="Controllers\ItemController.cs" />
     <Compile Include="Controllers\LocationController.cs" />
     <Compile Include="Controllers\RoleController.cs" />
@@ -173,6 +174,9 @@
     <Compile Include="Models\Auth\Auth.cs" />
     <Compile Include="Models\Auth\AuthData.cs" />
     <Compile Include="Models\Category\Category.cs" />
+    <Compile Include="Models\Inbound\Inbound.cs" />
+    <Compile Include="Models\Inbound\InboundDetail.cs" />
+    <Compile Include="Models\Inbound\InboundFetch.cs" />
     <Compile Include="Models\Item\Item.cs" />
     <Compile Include="Models\Item\ItemData.cs" />
     <Compile Include="Models\Location\Location.cs" />
@@ -220,6 +224,7 @@
     <Content Include="Scripts\jquery-3.4.1.slim.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
     <Content Include="Sql\Category_GET.sql" />
+    <Content Include="Sql\Inbound_GET.sql" />
     <Content Include="Sql\Item_DEL.sql" />
     <Content Include="Sql\Item_GET.sql" />
     <Content Include="Sql\Item_POST.sql" />
