@@ -33,7 +33,7 @@ namespace Warehouse_API.Controllers
                 foreach (var s in data.Select(x => new { x.OrderId, x.OrderNo, x.OrderDate, x.Status, x.OrderType }).Distinct().ToList())
                 {
                     orderData = new Order();
-                    orderDetail = data.Where(e => e.OrderId == s.OrderId).Select(y => new OrderDetail { OrderDetailId = y.OrderDetailId, ItemNo = y.ItemNo, Qty = y.Qty, QtyScanning = y.QtyScanning }).Distinct().ToList();
+                    orderDetail = data.Where(e => e.OrderId == s.OrderId).Select(y => new OrderDetail { OrderDetailId = y.OrderDetailId, ItemNo = y.ItemNo, ItemDesc = y.ItemDesc, Qty = y.Qty, QtyScanning = y.QtyScanning }).Distinct().ToList();
 
                     orderData.OrderId = s.OrderId;
                     orderData.OrderNo = s.OrderNo;

@@ -9,6 +9,7 @@ namespace Warehouse_API.Models.Order
     {
         public string OrderDetailId { get; set; }
         public string ItemNo { get; set; }
+        public string ItemDesc { get; set; }
         public double Qty { get; set; }
         public double QtyScanning { get; set; }
     }
