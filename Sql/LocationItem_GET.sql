@@ -1,0 +1,1 @@
+﻿exec LocationItem_GET @itemId, @token, @userName
