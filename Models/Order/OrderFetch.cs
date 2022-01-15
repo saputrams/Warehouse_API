@@ -13,6 +13,7 @@ namespace Warehouse_API.Models.Order
         public string Status { get; set; }
         public string OrderType { get; set; }
         public string OrderDetailId { get; set; }
+        public string ItemId { get; set; }
         public string ItemNo { get; set; }
         public string ItemDesc { get; set; }
         public double Qty { get; set; }
