@@ -50,8 +50,8 @@ namespace Warehouse_API.Controllers
             ResponseData response = new ResponseData();
             try
             {
-                IEnumerable<Location> location = connection.Get<Location>("LocationItem_GET",
-                    new { itemId, token, userName }).ToList();
+                Location location = connection.Get<Location>("LocationItem_GET",
+                    new { itemId, token, userName }).FirstOrDefault();
 
                 response.Message = "SUCCESS";
                 response.Data = location;
