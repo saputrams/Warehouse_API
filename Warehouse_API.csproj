@@ -178,6 +178,7 @@
     <Compile Include="Models\Category\Category.cs" />
     <Compile Include="Models\Courier\Courier.cs" />
     <Compile Include="Models\Order\Order.cs" />
+    <Compile Include="Models\Order\OrderData.cs" />
     <Compile Include="Models\Order\OrderDetail.cs" />
     <Compile Include="Models\Order\OrderFetch.cs" />
     <Compile Include="Models\Item\Item.cs" />
@@ -237,6 +238,7 @@
     <Content Include="Sql\Location_GET.sql" />
     <Content Include="Sql\Location_POST.sql" />
     <Content Include="Sql\Login_POST.sql" />
+    <Content Include="Sql\Order_POST.sql" />
     <Content Include="Sql\Role_GET.sql" />
     <Content Include="Sql\Shipping_GET.sql" />
     <Content Include="Sql\User_DEL.sql" />
