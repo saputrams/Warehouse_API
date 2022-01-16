@@ -10,6 +10,7 @@ using Warehouse_API.Models.Order;
 
 namespace Warehouse_API.Controllers
 {
+    [System.Web.Mvc.ValidateAntiForgeryToken]
     public class OrderController : ApiController
     {
 
