@@ -65,6 +65,27 @@ namespace Warehouse_API.Controllers
             }
         }
 
+        [HttpGet]
+        public IHttpActionResult Get(string status, string itemId, string token, string userName)
+        {
+            ResponseData response = new ResponseData();
+            try
+            {
+                IEnumerable<Location> location = connection.Get<Location>("LocationItem_GET",
+                    new { itemId, status, token, userName }).ToList();
+
+                response.Message = "SUCCESS";
+                response.Data = location;
+                return this.Content(HttpStatusCode.OK, response);
+            }
+            catch (Exception error)
+            {
+                response.Message = error.Message;
+                response.Data = null;
+                return this.Content(HttpStatusCode.BadRequest, response);
+            }
+        }
+
         [HttpPost]
         public IHttpActionResult Post([FromBody] LocationData data, string token, string userName)
         {

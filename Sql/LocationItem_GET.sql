@@ -1,1 +1,1 @@
-﻿exec LocationItem_GET @itemId, @token, @userName
+﻿exec LocationItem_GET @itemId, @status, @token, @userName
