@@ -1,0 +1,1 @@
+﻿exec Scan_GET @orderId, @token, @userName

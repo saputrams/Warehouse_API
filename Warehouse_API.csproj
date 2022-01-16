@@ -168,6 +168,7 @@
     <Compile Include="Controllers\LocationController.cs" />
     <Compile Include="Controllers\OrderController.cs" />
     <Compile Include="Controllers\RoleController.cs" />
+    <Compile Include="Controllers\ScanController.cs" />
     <Compile Include="Controllers\ShippingController.cs" />
     <Compile Include="Controllers\UsersController.cs" />
     <Compile Include="Global.asax.cs">
@@ -188,6 +189,7 @@
     <Compile Include="Models\Location\LocationData.cs" />
     <Compile Include="Models\ResponseData.cs" />
     <Compile Include="Models\Role\Role.cs" />
+    <Compile Include="Models\Scan\Scan.cs" />
     <Compile Include="Models\Shipping\Shipping.cs" />
     <Compile Include="Models\Users\Users.cs" />
     <Compile Include="Models\Users\UsersData.cs" />
@@ -243,6 +245,7 @@
     <Content Include="Sql\Login_POST.sql" />
     <Content Include="Sql\Order_POST.sql" />
     <Content Include="Sql\Role_GET.sql" />
+    <Content Include="Sql\Scan_GET.sql" />
     <Content Include="Sql\Shipping_GET.sql" />
     <Content Include="Sql\User_DEL.sql" />
     <Content Include="Sql\User_GET.sql" />
