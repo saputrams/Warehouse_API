@@ -170,6 +170,7 @@
     <Compile Include="Controllers\RoleController.cs" />
     <Compile Include="Controllers\ScanController.cs" />
     <Compile Include="Controllers\ShippingController.cs" />
+    <Compile Include="Controllers\SummaryController.cs" />
     <Compile Include="Controllers\UsersController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -192,6 +193,8 @@
     <Compile Include="Models\Scan\Scan.cs" />
     <Compile Include="Models\Shipping\Shipping.cs" />
     <Compile Include="Models\Shipping\ShippingData.cs" />
+    <Compile Include="Models\Summary\Summary.cs" />
+    <Compile Include="Models\Summary\SummaryData.cs" />
     <Compile Include="Models\Users\Users.cs" />
     <Compile Include="Models\Users\UsersData.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -249,6 +252,7 @@
     <Content Include="Sql\Scan_GET.sql" />
     <Content Include="Sql\Shipping_GET.sql" />
     <Content Include="Sql\Shipping_POST.sql" />
+    <Content Include="Sql\Summary_GET.sql" />
     <Content Include="Sql\User_DEL.sql" />
     <Content Include="Sql\User_GET.sql" />
     <Content Include="Sql\User_POST.sql" />

@@ -1,0 +1,1 @@
+﻿exec Summary_GET @fromDate, @toDate, @token, @userName
