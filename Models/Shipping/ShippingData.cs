@@ -5,11 +5,9 @@ using System.Web;
 
 namespace Warehouse_API.Models.Shipping
 {
-    public class Shipping
+    public class ShippingData
     {
         public string OrderId { get; set; }
-        public string OrderNo { get; set; }
-        public DateTime OrderDate { get; set; }
         public string Name { get; set; }
         public string PhoneNo { get; set; }
         public string Address { get; set; }

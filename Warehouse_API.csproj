@@ -191,6 +191,7 @@
     <Compile Include="Models\Role\Role.cs" />
     <Compile Include="Models\Scan\Scan.cs" />
     <Compile Include="Models\Shipping\Shipping.cs" />
+    <Compile Include="Models\Shipping\ShippingData.cs" />
     <Compile Include="Models\Users\Users.cs" />
     <Compile Include="Models\Users\UsersData.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -247,6 +248,7 @@
     <Content Include="Sql\Role_GET.sql" />
     <Content Include="Sql\Scan_GET.sql" />
     <Content Include="Sql\Shipping_GET.sql" />
+    <Content Include="Sql\Shipping_POST.sql" />
     <Content Include="Sql\User_DEL.sql" />
     <Content Include="Sql\User_GET.sql" />
     <Content Include="Sql\User_POST.sql" />
