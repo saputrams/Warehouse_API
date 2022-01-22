@@ -10,5 +10,6 @@ namespace Warehouse_API.Models.History
         public string OrderNo { get; set; }
         public DateTime OrderDate { get; set; }
         public string Status { get; set; }
+        public string OrderType { get; set; }
     }
 }
