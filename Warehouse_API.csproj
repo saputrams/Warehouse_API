@@ -241,6 +241,7 @@
     <Content Include="Sql\Category_GET.sql" />
     <Content Include="Sql\Courier_GET.sql" />
     <Content Include="Sql\LocationItem_GET.sql" />
+    <Content Include="Sql\Logout_POST.sql" />
     <Content Include="Sql\Order_GET.sql" />
     <Content Include="Sql\Item_DEL.sql" />
     <Content Include="Sql\Item_GET.sql" />

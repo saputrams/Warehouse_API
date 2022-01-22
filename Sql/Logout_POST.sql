@@ -1,0 +1,1 @@
+﻿exec Logout_POST @token, @userName

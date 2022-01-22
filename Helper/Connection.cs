@@ -28,6 +28,14 @@ namespace Warehouse_API.Helper
             return db.Query<T>(GetText(sqlPath), param: param).FirstOrDefault();
         }
 
+        public void Exec(string sqlPath, object param = null)
+        {
+
+            IDbConnection db = new SqlConnection(connection);
+
+            db.Execute(GetText(sqlPath), param: param);
+        }
+
         public string GetText(string text)
         {
             string sqlPath = Path.Combine(System.Web.HttpContext.Current.Server.MapPath("~/Sql/"),text)  + ".sql";

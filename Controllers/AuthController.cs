@@ -47,5 +47,30 @@ namespace Warehouse_API.Controllers
 
         }
 
+        [HttpPost]
+        public IHttpActionResult Post(string token, string userName)
+        {
+            ResponseData response = new ResponseData();
+            try
+            {
+                connection.Exec("Logout_POST", new { token, userName });
+
+
+                response.Message = "SUCCESS";
+                response.Data = "LOGOUT";
+
+                return this.Content(HttpStatusCode.OK, response);
+            }
+            catch (Exception error)
+            {
+                response.Message = error.Message;
+                response.Data = null;
+
+                return this.Content(HttpStatusCode.BadRequest, response);
+            }
+
+
+        }
+
     }
 }
