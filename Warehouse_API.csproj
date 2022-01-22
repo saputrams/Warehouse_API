@@ -164,6 +164,7 @@
     <Compile Include="Controllers\BufferController.cs" />
     <Compile Include="Controllers\CategoryController.cs" />
     <Compile Include="Controllers\CourierController.cs" />
+    <Compile Include="Controllers\HistoryController.cs" />
     <Compile Include="Controllers\ItemController.cs" />
     <Compile Include="Controllers\LocationController.cs" />
     <Compile Include="Controllers\OrderController.cs" />
@@ -181,6 +182,7 @@
     <Compile Include="Models\Auth\AuthData.cs" />
     <Compile Include="Models\Category\Category.cs" />
     <Compile Include="Models\Courier\Courier.cs" />
+    <Compile Include="Models\History\History.cs" />
     <Compile Include="Models\Order\Order.cs" />
     <Compile Include="Models\Order\OrderData.cs" />
     <Compile Include="Models\Order\OrderDetail.cs" />
@@ -240,6 +242,7 @@
     <Content Include="Sql\BufferItem_POST.sql" />
     <Content Include="Sql\Category_GET.sql" />
     <Content Include="Sql\Courier_GET.sql" />
+    <Content Include="Sql\History_GET.sql" />
     <Content Include="Sql\LocationItem_GET.sql" />
     <Content Include="Sql\Logout_POST.sql" />
     <Content Include="Sql\Order_GET.sql" />
