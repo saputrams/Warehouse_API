@@ -166,6 +166,8 @@
     <Compile Include="Controllers\CourierController.cs" />
     <Compile Include="Controllers\HistoryController.cs" />
     <Compile Include="Controllers\ItemController.cs" />
+    <Compile Include="Controllers\ItemDamageController.cs" />
+    <Compile Include="Controllers\ItemExpiredController.cs" />
     <Compile Include="Controllers\LocationController.cs" />
     <Compile Include="Controllers\OrderController.cs" />
     <Compile Include="Controllers\ReportItemController.cs" />
@@ -183,6 +185,10 @@
     <Compile Include="Models\Category\Category.cs" />
     <Compile Include="Models\Courier\Courier.cs" />
     <Compile Include="Models\History\History.cs" />
+    <Compile Include="Models\ItemDamage\ItemDamage.cs" />
+    <Compile Include="Models\ItemDamage\ItemDamageData.cs" />
+    <Compile Include="Models\ItemExpired\ItemExpired.cs" />
+    <Compile Include="Models\ItemExpired\ItemExpiredData.cs" />
     <Compile Include="Models\Order\Order.cs" />
     <Compile Include="Models\Order\OrderData.cs" />
     <Compile Include="Models\Order\OrderDetail.cs" />
@@ -243,6 +249,10 @@
     <Content Include="Sql\Category_GET.sql" />
     <Content Include="Sql\Courier_GET.sql" />
     <Content Include="Sql\History_GET.sql" />
+    <Content Include="Sql\ItemDamage_GET.sql" />
+    <Content Include="Sql\ItemDamage_POST.sql" />
+    <Content Include="Sql\ItemExpired_GET.sql" />
+    <Content Include="Sql\ItemExpired_POST.sql" />
     <Content Include="Sql\LocationItem_GET.sql" />
     <Content Include="Sql\Logout_POST.sql" />
     <Content Include="Sql\Order_GET.sql" />

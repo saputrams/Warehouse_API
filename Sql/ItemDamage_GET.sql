@@ -1,0 +1,1 @@
+﻿exec ItemDamage_GET @token, @userName
