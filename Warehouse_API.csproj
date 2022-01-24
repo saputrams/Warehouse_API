@@ -169,6 +169,7 @@
     <Compile Include="Controllers\ItemDamageController.cs" />
     <Compile Include="Controllers\ItemExpiredController.cs" />
     <Compile Include="Controllers\LocationController.cs" />
+    <Compile Include="Controllers\OrderCancelledController.cs" />
     <Compile Include="Controllers\OrderController.cs" />
     <Compile Include="Controllers\ReportItemController.cs" />
     <Compile Include="Controllers\RoleController.cs" />
@@ -255,6 +256,7 @@
     <Content Include="Sql\ItemExpired_POST.sql" />
     <Content Include="Sql\LocationItem_GET.sql" />
     <Content Include="Sql\Logout_POST.sql" />
+    <Content Include="Sql\OrderCancelled_POST.sql" />
     <Content Include="Sql\Order_GET.sql" />
     <Content Include="Sql\Item_DEL.sql" />
     <Content Include="Sql\Item_GET.sql" />
