@@ -8,7 +8,7 @@ namespace Warehouse_API.Models.ReportOutbound
     public class ReportOutbound
     {
         public string OrderNo { get; set; }
-        public DateTime OrderDate { get; set; }
+        public string OrderDate { get; set; }
         public string Status { get; set; }
         public string TotalItem { get; set; }
         public string TotalQty { get; set; }
