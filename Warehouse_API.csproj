@@ -171,7 +171,10 @@
     <Compile Include="Controllers\LocationController.cs" />
     <Compile Include="Controllers\OrderCancelledController.cs" />
     <Compile Include="Controllers\OrderController.cs" />
+    <Compile Include="Controllers\ReportInboundController.cs" />
     <Compile Include="Controllers\ReportItemController.cs" />
+    <Compile Include="Controllers\ReportOutboundController.cs" />
+    <Compile Include="Controllers\ReportUserController.cs" />
     <Compile Include="Controllers\RoleController.cs" />
     <Compile Include="Controllers\ScanController.cs" />
     <Compile Include="Controllers\ShippingController.cs" />
@@ -198,7 +201,10 @@
     <Compile Include="Models\Item\ItemData.cs" />
     <Compile Include="Models\Location\Location.cs" />
     <Compile Include="Models\Location\LocationData.cs" />
+    <Compile Include="Models\ReportInbound\ReportInbound.cs" />
     <Compile Include="Models\ReportItem\ReportItem.cs" />
+    <Compile Include="Models\ReportOutbound\ReportOutbound.cs" />
+    <Compile Include="Models\ReportUser\ReportUser.cs" />
     <Compile Include="Models\ResponseData.cs" />
     <Compile Include="Models\Role\Role.cs" />
     <Compile Include="Models\Scan\Scan.cs" />
@@ -267,7 +273,10 @@
     <Content Include="Sql\Login_POST.sql" />
     <Content Include="Sql\Order_POST.sql" />
     <Content Include="Sql\Role_GET.sql" />
+    <Content Include="Sql\RPT_Inbound_GET.sql" />
     <Content Include="Sql\RPT_Item_GET.sql" />
+    <Content Include="Sql\RPT_Outbound_GET.sql" />
+    <Content Include="Sql\RPT_User_GET.sql" />
     <Content Include="Sql\Scan_GET.sql" />
     <Content Include="Sql\Shipping_GET.sql" />
     <Content Include="Sql\Shipping_POST.sql" />

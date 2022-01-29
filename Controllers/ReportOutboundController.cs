@@ -6,28 +6,27 @@ using System.Net.Http;
 using System.Web.Http;
 using Warehouse_API.Helper;
 using Warehouse_API.Models;
-using Warehouse_API.Models.ReportItem;
+using Warehouse_API.Models.ReportOutbound;
 
 namespace Warehouse_API.Controllers
 {
     [System.Web.Mvc.ValidateAntiForgeryToken]
-    public class ReportItemController : ApiController
+    public class ReportOutboundController : ApiController
     {
-
         Connection connection;
 
-        ReportItemController()
+        ReportOutboundController()
         {
             connection = new Connection();
         }
-        
+
         [HttpGet]
-        public IHttpActionResult Get(string token,string userName)
+        public IHttpActionResult Get(string token, string userName)
         {
             ResponseData response = new ResponseData();
             try
             {
-                IEnumerable<ReportItem> report = connection.Get<ReportItem>("RPT_Item_GET",
+                IEnumerable<ReportOutbound> report = connection.Get<ReportOutbound>("RPT_Outbound_GET",
                     new { token, userName }).ToList();
 
 
